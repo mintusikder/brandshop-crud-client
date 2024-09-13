@@ -43,8 +43,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider>
+   <div className="max-w-6xl mx-auto">
+   <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
+   </div>
   </StrictMode>
 );
