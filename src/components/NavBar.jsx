@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const NavBar = () => {
-  const { user, logOut } = useAuth();
+  const { user, logOut } = useAuth() || {};
   const nav = (
     <>
       <li>
