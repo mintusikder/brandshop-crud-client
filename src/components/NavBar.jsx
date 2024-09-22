@@ -41,6 +41,7 @@ const NavBar = () => {
               />
             </svg>
           </div>
+
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
@@ -54,13 +55,11 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{nav}</ul>
       </div>
       <div className="navbar-end">
+        
         {user ? (
           <>
             {user.email}
-            <Link
-              onClick={handelLogOut}
-              className="btn btn-outline"
-            >
+            <Link onClick={handelLogOut} className="btn btn-outline">
               LogOut
             </Link>
           </>

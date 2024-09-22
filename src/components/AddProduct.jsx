@@ -17,7 +17,7 @@ const AddProduct = () => {
     const email = user.email;
 
     // Log all values for now
-    const productData = {email, name, price, brand, type, rating, imageUrl };
+    const productData = { email, name, price, brand, type, rating, imageUrl };
     console.log(user);
     fetch("http://localhost:5000/shops", {
       method: "POST",
@@ -26,10 +26,12 @@ const AddProduct = () => {
       },
       body: JSON.stringify(productData),
     })
-    .then(res => res.json())
-    .then(data =>{
-      console.log(data)
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.insertedId) {
+          alert("Product add successful");
+        }
+      });
   };
 
   return (
